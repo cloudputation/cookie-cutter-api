@@ -20,11 +20,11 @@ job "{{.Service.Name}}" {
       driver = "docker"
 
       config {
-        image = "registry.gitlab.com/{{.Service.Repo.RepositoryOwner}}/{{.Service.Name}}:latest"
+        image = "registry.gitlab.com/{{.Service.Repository.RepoConfig.RepositoryOwner}}/{{.Service.Name}}:latest"
         ports = ["port"]
         auth {
-          username = "{{.Service.Repo.RepositoryOwner}}"
-          password = "{{.Service.Repo.RegistryToken}}"
+          username = "{{.Service.Repository.RepoConfig.RepositoryOwner}}"
+          password = "{{.Service.Repository.RepoConfig.RegistryToken}}"
         }
       }
 
