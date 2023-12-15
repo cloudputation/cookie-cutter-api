@@ -22,5 +22,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           echo $(pwd)
-          sudo docker build -t ghcr.io/{{.Service.Repo.RepositoryOwner}}/{{.Service.Name}}:latest .
-          sudo docker push ghcr.io/{{.Service.Repo.RepositoryOwner}}/{{.Service.Name}}:latest
+          sudo docker build -t ghcr.io/{{.Service.Repository.RepoConfig.RepositoryOwner}}/{{.Service.Name}}:latest .
+          sudo docker push ghcr.io/{{.Service.Repository.RepoConfig.RepositoryOwner}}/{{.Service.Name}}:latest
