@@ -3,7 +3,7 @@ job "{{.Service.Name}}" {
 
   constraint {
     attribute = "${attr.unique.hostname}"
-    value     = "{{.Service.Network.target_host}}"
+    value     = "{{.Service.Network.TargetHost}}"
   }
 
   type = "service"
